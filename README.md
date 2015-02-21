@@ -43,7 +43,7 @@ The script will
 Once the file is in your working directory, you can use the following R code to run the script and see the data:  
 
     source('run_analysis.R')
-	tidydata <- run_analisis()
+	tidydata <- run_analysis()
 	View(tidydata)
 
 

@@ -1,10 +1,12 @@
 ## Getting and Cleanning Data Course Project:
 ## You should create one R script called run_analysis.R that does the following. 
 ## 1. Merges the training and the test sets to create one data set.
-run_analisis <- function() {
+run_analysis <- function() {
 require("dplyr")
 require("tidyr")
 
+## 1. Merge the training and the test sets to create one data set.
+##    create a list of paths          
 syxfiles <- list(s = c("./UCI HAR Dataset/test/subject_test.txt",
                         "./UCI HAR Dataset/train/subject_train.txt"), 
                   y = c("./UCI HAR Dataset/test/y_test.txt",
@@ -18,7 +20,8 @@ activityfile <- read.table(syxfiles$activityl, sep = " ",
                            header = FALSE, stringsAsFactors = FALSE)
 featuresfile <- read.table(syxfiles$features, sep = " ", 
                            header = FALSE, stringsAsFactors = FALSE)$V2
-## 
+## read and bind rows
+## use dplyr as_data_frame and bind_rows -- faster --
 sfile <- as_data_frame(bind_rows(lapply(syxfiles$s, 
                                         read.table, sep = "", header = FALSE, 
                                         col.names = "subject", 
@@ -30,12 +33,14 @@ yfile <- as_data_frame(bind_rows(lapply(syxfiles$y,
 xfile <- as_data_frame(bind_rows(lapply(syxfiles$x, read.table, sep = "", 
                                         header = FALSE, colClasses = numeric())))
 ## end of reading files block -------------------------------------------------
+## bind columns
 syx_df <- as_data_frame(bind_cols(sfile, yfile, xfile))
 ## add column names to syx_dataframe (this is requested as step 4)
 colnames(syx_df)[-c(1,2)] <- featuresfile
-## End of request 1
+## End of request 1----------------------------------------------------------
 ## 2.  Extracts only the measurements on the mean and standard deviation for each measurement. 
 syx_df <- syx_df[c(1,2, grep("-mean()[^F]|-std()", names(syx_df)))]
+## end request 2 ------------------------------------------------------------
 ## 3,- Use descriptive activity names to name the activities in the data set
 ##     will do this by constructing a named list to be used as a lookup table
 ##      subset colunm 1 from activityfile for the numbers
@@ -46,7 +51,7 @@ activitynames <- activityfile$V1
 activityvector <- activityfile[,2]
 names(activityvector) <- activityfile$V1
 syx_df <- syx_df %>% mutate(activity = unname(activityvector[activity]))
-## end of request 3
+## end of request 3--------------------------------------------------------
 ## Clean up - delete unused files
 rm(syxfiles, activityfile, featuresfile, sfile, yfile, xfile, activitynames, activityvector)
 ## 4. Appropriately labels the data set with descriptive variable names.
@@ -55,6 +60,7 @@ rm(syxfiles, activityfile, featuresfile, sfile, yfile, xfile, activitynames, act
 ##      will just remove "()" and "-" for cleaner variable namess and make all lowercase.
 names(syx_df) <- gsub("[\\()-]", "", colnames(syx_df))
 names(syx_df) <- tolower(names(syx_df))
+## end request 4 ----------------------------------------------------------
 ## 5. From the data set in step 4, creates a second, independent tidy data set 
 ##    with the average of each variable for each activity and each subject.
 tidydata <-syx_df %>% group_by(subject, activity) %>% summarise_each(funs(mean))%>%
