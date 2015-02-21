@@ -46,80 +46,81 @@ Feature Identifier
 	'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
 	"mean" and "std" indicate the calculation applied to the feature  
 	 
-		tbodyaccmeanx
-		tbodyaccmeany
-		tbodyaccmeanz
-		tbodyaccstdx
-		tbodyaccstdy
-		tbodyaccstdz
-		tgravityaccmeanx
-		tgravityaccmeany
-		tgravityaccmeanz
-		tgravityaccstdx
-		tgravityaccstdy
-		tgravityaccstdz
-		tbodyaccjerkmeanx
-		tbodyaccjerkmeany
-		tbodyaccjerkmeanz
-		tbodyaccjerkstdx
-		tbodyaccjerkstdy
-		tbodyaccjerkstdz
-		tbodygyromeanx
-		tbodygyromeany
-		tbodygyromeanz
-		tbodygyrostdx
-		tbodygyrostdy
-		tbodygyrostdz
-		tbodygyrojerkmeanx
-		tbodygyrojerkmeany
-		tbodygyrojerkmeanz
-		tbodygyrojerkstdx
-		tbodygyrojerkstdy
-		tbodygyrojerkstdz
-		tbodyaccmagmean
-		tbodyaccmagstd
-		tgravityaccmagmean
-		tgravityaccmagstd
-		tbodyaccjerkmagmean
-		tbodyaccjerkmagstd
-		tbodygyromagmean
-		tbodygyromagstd
-		tbodygyrojerkmagmean
-		tbodygyrojerkmagstd
-		fbodyaccmeanx
-		fbodyaccmeany
-		fbodyaccmeanz
-		fbodyaccstdx
-		fbodyaccstdy
-		fbodyaccstdz
-		fbodyaccjerkmeanx
-		fbodyaccjerkmeany
-		fbodyaccjerkmeanz
-		fbodyaccjerkstdx
-		fbodyaccjerkstdy
-		fbodyaccjerkstdz
-		fbodygyromeanx
-		fbodygyromeany
-		fbodygyromeanz
-		fbodygyrostdx
-		fbodygyrostdy
-		fbodygyrostdz
-		fbodyaccmagmean
-		fbodyaccmagstd
-		fbodybodyaccjerkmagmean
-		fbodybodyaccjerkmagstd
-		fbodybodygyromagmean
-		fbodybodygyromagstd
-		fbodybodygyrojerkmagmean
-		fbodybodygyrojerkmagstd
+		tbodyaccmeanx      		 .Mean of time frequency from body acceleration in axis x 
+		tbodyaccmeany     		 .Mean of time frequency from body acceleration in axis y
+		tbodyaccmeanz      		 .Mean of time frequency from body acceleration in axis z
+		tbodyaccstdx       		 .Standard diviation of time frequency from body acceleration in axis x 
+		tbodyaccstdy       		 .Standard diviation of time frequency from body acceleration in axis y
+		tbodyaccstdz       		 .Standard diviation of time frequency from body acceleration in axis z
+		tgravityaccmeanx   		 .Mean of time frequency from gravity acceleration in axis x
+		tgravityaccmeany   		 .Mean of time frequency from gravity acceleration in axis y
+		tgravityaccmeanz   		 .Mean of time frequency from gravity acceleration in axis z
+		tgravityaccstdx    		 .Standard diviation of time frequency from gravity acceleration in axis x
+		tgravityaccstdy    		 .Standard diviation of time frequency from gravity acceleration in axis y
+		tgravityaccstdz    		 .Standard diviation of time frequency from gravity acceleration in axis z
+		tbodyaccjerkmeanx  		 .Mean of time frequency from jerk acceleration in axis x
+		tbodyaccjerkmeany  		 .Mean of time frequency from jerk acceleration in axis y
+		tbodyaccjerkmeanz  		 .Mean of time frequency from jerk acceleration in axis z
+		tbodyaccjerkstdx   		 .Standard diviation of time frequency from jerk acceleration in axis x
+		tbodyaccjerkstdy 	     .Standard diviation of time frequency from jerk acceleration in axis y
+		tbodyaccjerkstdz 	     .Standard diviation of time frequency from jerk acceleration in axis z
+		tbodygyromeanx   	     .Mean of time frequency from body movement of gyroscope in axis x
+		tbodygyromeany    		 .Mean of time frequency from body movement of gyroscope in axis y
+		tbodygyromeanz     		 .Mean of time frequency from body movement of gyroscope in axis z
+		tbodygyrostdx      		 .Standard diviation of time frequency from body movement of gyroscope in axis x
+		tbodygyrostdy      		 .Standard diviation of time frequency from body movement of gyroscope in axis y
+		tbodygyrostdz      		 .Standard diviation of time frequency from body movement of gyroscope in axis z
+		tbodygyrojerkmeanx 		 .Mean of time frequency from jerk movement of gyroscope in axis x
+		tbodygyrojerkmeany 		 .Mean of time frequency from jerk movement of gyroscope in axis y
+		tbodygyrojerkmeanz 		 .Mean of time frequency from jerk movement of gyroscope in axis z
+		tbodygyrojerkstdx  		 .Standard diviation of time frequency from jerk movement of gyroscope in axis x
+		tbodygyrojerkstdy  		 .Standard diviation of time frequency from jerk movement of gyroscope in axis y
+		tbodygyrojerkstdz	     .Standard diviation of time frequency from jerk movement of gyroscope in axis z
+		tbodyaccmagmean   		 .Mean of time frequency from body acceleration magnitud
+		tbodyaccmagstd   	     .Standard diviation of time frequency from body acceleration magnitud
+		tgravityaccmagmean 		 .Mean of time frequency from gravity acceleration magnitud
+		tgravityaccmagstd  		 .Standard diviation of time frequency from gravity acceleration magnitud
+		tbodyaccjerkmagmean		 .Mean of time frequency from jerk acceleration magnitud
+		tbodyaccjerkmagstd 		 .Standard diviation of time frequency from jerk acceleration magnitud
+		tbodygyromagmean   	     .Mean of time frequency from body movement of gyroscope magnitud
+		tbodygyromagstd    	   	 .Standard diviation of time frequency from body movement of gyroscope magnitud
+		tbodygyrojerkmagmean 	 .Mean of time frequency from jerk movement of gyroscope magnitud
+		tbodygyrojerkmagstd 	 .Standard diviation of time frequency from jerk movement of gyroscope in axis y
+		fbodyaccmeanx  		     .Mean of time frequency from body acceleration in axis x 
+		fbodyaccmeany  		     .Mean of time frequency from body acceleration in axis y
+		fbodyaccmeanz  		     .Mean of time frequency from body acceleration in axis z
+		fbodyaccstdx  		     .Standard diviation of time frequency from body acceleration in axis x 
+		fbodyaccstdy    	     .Standard diviation of time frequency from body acceleration in axis y 
+		fbodyaccstdz     	     .Standard diviation of time frequency from body acceleration in axis z
+		fbodyaccjerkmeanx 		 .Mean of time frequency from jerk acceleration in axis x
+		fbodyaccjerkmeany        .Mean of time frequency from jerk acceleration in axis y
+		fbodyaccjerkmeanz        .Mean of time frequency from jerk acceleration in axis z
+		fbodyaccjerkstdx         .Standard diviation of time frequency from gravity acceleration in axis x
+		fbodyaccjerkstdy         .Standard diviation of time frequency from gravity acceleration in axis y
+		fbodyaccjerkstdz         .Standard diviation of time frequency from gravity acceleration in axis z
+		fbodygyromeanx           .Mean of time frequency from body movement of gyroscope in axis x
+		fbodygyromeany           .Mean of time frequency from body movement of gyroscope in axis y
+		fbodygyromeanz           .Mean of time frequency from body movement of gyroscope in axis z
+		fbodygyrostdx            .Standard diviation of time frequency from body movement of gyroscope in axis x
+		fbodygyrostdy            .Standard diviation of time frequency from body movement of gyroscope in axis y
+		fbodygyrostdz            .Standard diviation of time frequency from body movement of gyroscope in axis z
+		fbodyaccmagmean          .Mean of time frequency from body acceleration magnitud
+		fbodyaccmagstd           .Standard diviation of time frequency from body movement of gyroscope magnitud
+		fbodybodyaccjerkmagmean  .Mean of time frequency from jerk acceleration magnitud
+		fbodybodyaccjerkmagstd   .Standard diviation of time frequency from jerk acceleration magnitud
+		fbodybodygyromagmean     .Mean of time frequency from body movement of gyroscope magnitud
+		fbodybodygyromagstd      .Standard diviation of time frequency from body movement of gyroscope magnitud
+		fbodybodygyrojerkmagmean .Mean of time frequency from jerk movement of gyroscope magnitud
+		fbodybodygyrojerkmagstd  .Standard diviation of time frequency from jerk movement of gyroscope in axis y
 
 
-##meanvalue 8..10  
+##meanvalue 9..10  
 Mean calculated value of feature  
 
-		-0.99767..0.97451  Mean calculated value of feature  
+		-0.9976661..0.9745087  Mean calculated value of feature  
 
 ##Note:  
 	-Data users should be aware that this file only contains the standard deviation 
 	 and the mean as a subset of all the available features from the original file.
-	-Feature names differ from original source as "()" and some "-" were removes.   
+	-Feature names differ from original source as "()" and some "-" were removes.
+	-Source features are normalized and bounded within [-1,1]   
